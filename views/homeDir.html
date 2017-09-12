@@ -1,0 +1,9 @@
+<div ng-controller="homeCtrl">
+<img class="logo" src="./images/logo.svg" alt="">
+<div id="background">
+    <div class="align">
+        <input ng-model="searchTerm" class='search' type="text" placeholder="Search City, State.">
+        <img ng-click="getLocation({searchTerm: searchTerm})" id="icon" src="./images/search.svg" alt="">
+    </div>
+</div>
+</div>
