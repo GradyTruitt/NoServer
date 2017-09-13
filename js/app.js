@@ -1,1 +1,1 @@
-angular.module('eateryApp', ['ui.router']);
+angular.module('eatsApp', ['ui.router']);

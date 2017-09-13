@@ -41,11 +41,11 @@
     border: none;
     background-color: rgba(0, 0, 0, .5);
     color: white;
-    -webkit-backdrop-filter: blur(10px);
 }
 
 .search:focus {
     outline: none;
+    caret-color: #C5F018;
 }
 
 .search::placeholder {
@@ -55,11 +55,12 @@
 #icon {
     height: 100%;
     width: 34px;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(197, 240, 24, 0.60);
     padding: 40px 40px 34px 40px;
     border-radius: 0 8px 8px 0;
+    cursor: pointer;
 }
 
 #icon:hover {
-    background-color: rgba(197, 240, 24, 0.80);
+    background-color: rgba(197, 240, 24, 0.85);
 }
