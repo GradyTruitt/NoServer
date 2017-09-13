@@ -13,6 +13,6 @@ angular.module('eateryApp').config(function($stateProvider, $urlRouterProvider) 
                 templateUrl: './views/results.html',
                 url: '/results',
                 controller: 'resultsCtrl'
-            })
+            });
     
     });

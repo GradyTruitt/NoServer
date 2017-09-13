@@ -26,6 +26,12 @@
     align-items: center;
 }
 
+.form{
+    margin:0;
+    padding: 0;
+    background-color: transparent;
+}
+
 .search {
     width: 45vw;
     font-size: 66px;

@@ -5,10 +5,6 @@ body {
 
 
 
-
-
-
-
 .fade {
     animation: fadein .4s;
     -moz-animation: fadein .4s; /* Firefox */
