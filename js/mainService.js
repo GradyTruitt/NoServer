@@ -2,6 +2,7 @@ angular.module('eatsApp').service('mainService', function($http){
 
     this.searchResults = '';
     this.searchTerm = '';
+    this.location = ''
     
         this.getLocation = function(location) {
     
@@ -18,7 +19,6 @@ angular.module('eatsApp').service('mainService', function($http){
             var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + term + "&type=restaurant&rankby=distance&key=AIzaSyAu0kbhIMYpqogbdqV4D2j3miy1VmorOqw";
             
             return $http.get(url).then(function(res){
-                this.searchResults = res.data.results;
                  return res.data.results;
             });
         };

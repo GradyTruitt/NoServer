@@ -14,5 +14,11 @@ angular.module('eatsApp').config(function($stateProvider, $urlRouterProvider) {
                 url: '/results',
                 controller: 'resultsCtrl'
             })
+
+            .state('map', {
+                templateUrl: '/views/map.html',
+                url: '/map',
+                controller: 'mapCtrl'
+            })
     
     });

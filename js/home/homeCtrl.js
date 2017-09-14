@@ -1,4 +1,15 @@
-angular.module('eatsApp').controller('homeCtrl', function($scope, $state, mainService){
+angular.module('eatsApp').controller('homeCtrl', function($scope, $state, mainService, $interval){
+
+    var images = ['./images/2.jpg','./images/3.jpg','./images/4.jpg','./images/5.jpg','./images/6.jpg','./images/7.jpg','./images/8.jpg','./images/9.jpg','./images/10.jpg','./images/11.jpg','./images/12.jpg','./images/1.jpg'];
+    var i = 0;
+   var background = document.getElementById('background');
+   $interval(function() {
+    background.style.backgroundImage = "url(" + images[i] + ")";
+    i = i + 1;
+    if (i == images.length) {
+        i =  0;
+    }
+    }, 3000);
 
     $scope.getLocation = function(searchTerm) {
         if (document.getElementById('main-input').value) {

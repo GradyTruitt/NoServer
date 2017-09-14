@@ -1,0 +1,52 @@
+
+<div ng-controller="resultsCtrl">
+    <img class="logo-2" src="/images/logo2.svg" alt="">
+    <div class="header">
+            <img class="logo-2" src="/images/logo2.svg" alt="">            
+        <div class="header-content">
+            <div class="results-align">
+                <div class="green-bar"></div>
+                <h3 class="results-txt">Showing Results For</h3>
+                <div class="green-bar"></div>                
+            </div>
+            <h1 class="header-city">{{ searchTerm }}</h1>
+        </div>
+    </div>
+    <img id="x" class="x" ng-click="hideModal()" src="/images/x.svg" alt="">
+    <div id="map-modal" class="map-modal">
+            <div id='map'></div>
+            <div id='instructions'></div>
+    </div>
+    <div class="result-card fade" ng-repeat="result in searchResults track by $index">
+        <div id="img-div" ng-style="{'background-image': 'url(' + result.photo + ')'}"></div>
+        <div id="padding{{$index}}" class="content-div">
+            <div id="content-align{{$index}}" class="content-align">
+                <div id="center-content{{$index}}" class="center-content">
+                    <h1 class="name" >{{ result.name }}</h1>
+                        <h2 class="address"> {{ result.address }}</h2>
+                            <div class="divider"></div>
+                                <div class="info-align">
+                                    <h4 class="info">Rating:</h4><img class="stars" src="{{ result.rating }}" alt="">
+                                </div>
+                                    <div class="spacing"></div>
+                                <div class="info-align">
+                                    <h4 class="info">Price:</h4><img class="money" src="{{ result.price }}" alt="">
+                                </div>
+                    <div class="directions-btn" ng-click="getDirections($index)"><h4 class="button-txt">Get Directions</h4></div>
+                </div>
+            </div>
+                <div id="shrink{{$index}}" class="right-content-box">
+                        <h3 ng-class="result.open" >{{ result.open }}</h3>
+                            <div  id="show{{$index}}" class="show" ng-mouseover="expand($index)" ng-mouseleave="unexpand($index)" ng-click="showMap($index)" class="view-map-btn">
+                                <img class="arrow" src="/images/arrow.svg" alt=""/><h3 class="view-map">View Map</h3>
+                            </div>
+                        <div id="hide{{$index}}" class="hide" ng-click="hideMap($index)" class="view-map-btn2">
+                            <h3 class="view-map2">Hide Map</h3><img class="arrow2" src="/images/arrow2.svg" alt=""/>
+                        </div>
+                </div>
+            <div id="map-{{$index}}" class='expanding fade'>
+                    <div id='map{{$index}}'class="map"></div>
+            </div>
+        </div>
+    </div>
+</div>
