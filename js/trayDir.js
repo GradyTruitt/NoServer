@@ -1,6 +1,6 @@
 angular.module('eatsApp').directive('trayyy', function ($document){
     return {
-        templateUrl: './views/tray.html',
+        templateUrl: '/views/tray.html',
         restrict: 'EA',
         link: function(scope, elements, attributes) {
 

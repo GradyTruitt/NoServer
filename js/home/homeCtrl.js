@@ -1,6 +1,6 @@
 angular.module('eatsApp').controller('homeCtrl', function($scope, $state, mainService, $interval){
 
-    var images = ['./images/2.jpg','./images/3.jpg','./images/4.jpg','./images/5.jpg','./images/6.jpg','./images/7.jpg','./images/8.jpg','./images/9.jpg','./images/10.jpg','./images/11.jpg','./images/12.jpg','./images/1.jpg'];
+    var images = ['/images/2.jpg','/images/3.jpg','/images/4.jpg','/images/5.jpg','/images/6.jpg','/images/7.jpg','/images/8.jpg','/images/9.jpg','/images/10.jpg','/images/11.jpg','/images/12.jpg','/images/1.jpg'];
     var i = 0;
    var background = document.getElementById('background');
    $interval(function() {
@@ -41,7 +41,7 @@ angular.module('eatsApp').controller('homeCtrl', function($scope, $state, mainSe
                         if (res[i].photos) {
                             return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=900&photoreference=" + res[i].photos[0].photo_reference + "&key=AIzaSyBk28FI1UwSYVxXuwWsghXYAe3ptBXI0HQ";
                         }
-                        else {return "./images/noimage.jpg";}
+                        else {return "/images/noimage.jpg";}
                     };
                     
                     var openNow = function(){
@@ -56,58 +56,58 @@ angular.module('eatsApp').controller('homeCtrl', function($scope, $state, mainSe
 
                     var rating = function() {
                         if (res[i].rating < 0.5) {
-                            return './images/0st.svg';
+                            return '/images/0st.svg';
                         }
                         else if (res[i].rating >= 0.5 && res[i].rating < 1) {
-                            return './images/0_5st.svg';
+                            return '/images/0_5st.svg';
                         }
                         else if (res[i].rating >= 1 && res[i].rating < 1.5) {
-                            return './images/1st.svg';
+                            return '/images/1st.svg';
                         }
                         else if (res[i].rating >= 1.5 && res[i].rating < 2) {
-                            return './images/1_5st.svg';
+                            return '/images/1_5st.svg';
                         }
                         else if (res[i].rating >= 2 && res[i].rating < 2.5) {
-                            return './images/2st.svg';
+                            return '/images/2st.svg';
                         }
                         else if (res[i].rating >= 2.5 && res[i].rating < 3) {
-                            return './images/2_5st.svg';
+                            return '/images/2_5st.svg';
                         }
                         else if (res[i].rating >= 3 && res[i].rating < 3.5) {
-                            return './images/3st.svg';
+                            return '/images/3st.svg';
                         }
                         else if (res[i].rating >= 3.5 && res[i].rating < 4) {
-                            return './images/3_5st.svg';
+                            return '/images/3_5st.svg';
                         }
                         else if (res[i].rating >= 4 && res[i].rating < 4.5) {
-                            return './images/4st.svg';
+                            return '/images/4st.svg';
                         }
                         else if (res[i].rating >= 4.5 && res[i].rating < 5) {
-                            return './images/4_5st.svg';
+                            return '/images/4_5st.svg';
                         }
                         else if (res[i].rating >= 5) {
-                            return './images/5st.svg';
+                            return '/images/5st.svg';
                         }
-                        else return './images/0st.svg';
+                        else return '/images/0st.svg';
                     }
 
                     var price = function(){
                         if (res[i].price_level <= 1) {
-                            return "./images/money1.svg";
+                            return "/images/money1.svg";
                         }
                         else if (res[i].price_level > 1 && res[i].price_level <= 2) {
-                            return "./images/money2.svg";
+                            return "/images/money2.svg";
                         }
                         else if (res[i].price_level > 2 && res[i].price_level <= 3) {
-                            return "./images/money3.svg";
+                            return "/images/money3.svg";
                         }
                         else if (res[i].price_level > 3 && res[i].price_level <= 4) {
-                            return "./images/money4.svg";
+                            return "/images/money4.svg";
                         }
                         else if (res[i].price_level > 4 && res[i].price_level <= 5) {
-                            return "./images/money5.svg";
+                            return "/images/money5.svg";
                         }
-                        else return "./images/money2.svg";
+                        else return "/images/money2.svg";
                     }
                     
                     var obj = {
