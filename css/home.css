@@ -39,7 +39,7 @@
     text-align: center;
     border-radius: 8px 0 0 8px;
     border: none;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .6);
     color: white;
 }
 
@@ -63,4 +63,27 @@
 
 #icon:hover {
     background-color: rgba(197, 240, 24, 0.85);
+}
+
+
+@media (max-width: 1130px){
+
+    .search {
+        font-size: 44px;
+        padding: 10px;
+    }
+    
+    #icon {
+        width: 20px;
+        padding: 28px 30px 24px 30px;
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    .search {
+        width: 65vw;
+    }
+
 }

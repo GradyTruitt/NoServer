@@ -3,3 +3,24 @@ body {
     padding: 0;
     background-color: #F5F5F5;
 }
+
+.tray {
+    margin:0;
+    padding: 0;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 0;
+    transition-duration: .5s;
+    margin-right: -2px;
+    z-index: 1005;
+}
+
+
+@media (max-width: 550px) {
+    
+        .tray {
+            display: none;
+        }
+        
+    }

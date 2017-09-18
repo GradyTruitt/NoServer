@@ -1,15 +1,16 @@
 
 <div ng-controller="resultsCtrl">
-    <img class="logo-2" src="/images/logo2.svg" alt="">
-    <div class="header">
-            <img class="logo-2" src="/images/logo2.svg" alt="">            
-        <div class="header-content">
-            <div class="results-align">
-                <div class="green-bar"></div>
-                <h3 class="results-txt">Showing Results For</h3>
-                <div class="green-bar"></div>                
+    <div id="header" class="header">
+        <div class="overlay">
+                <img class="logo-2" src="/images/logo2.svg" alt="">            
+            <div class="header-content">
+                <div class="results-align">
+                    <div class="green-bar"></div>
+                    <h3 class="results-txt">Showing Results For</h3>
+                    <div class="green-bar"></div>                
+                </div>
+                <h1 class="header-city">{{ searchTerm }}</h1>
             </div>
-            <h1 class="header-city">{{ searchTerm }}</h1>
         </div>
     </div>
     <img id="x" class="x" ng-click="hideModal()" src="/images/x.svg" alt="">
