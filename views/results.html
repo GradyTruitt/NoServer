@@ -2,7 +2,7 @@
 <div ng-controller="resultsCtrl">
     <div id="header" class="header">
         <div class="overlay">
-                <img class="logo-2" src="/images/logo2.svg" alt="">            
+                <img class="logo-2" src="./images/logo2.svg" alt="">            
             <div class="header-content">
                 <div class="results-align">
                     <div class="green-bar"></div>
@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <img id="x" class="x" ng-click="hideModal()" src="/images/x.svg" alt="">
+    <img id="x" class="x" ng-click="hideModal()" src="./images/x.svg" alt="">
     <div id="map-modal" class="map-modal">
             <div id='map'></div>
             <div id='instructions'></div>
@@ -39,10 +39,10 @@
                 <div id="shrink{{$index}}" class="right-content-box">
                         <h3 ng-class="result.open" >{{ result.open }}</h3>
                             <div  id="show{{$index}}" class="show" ng-mouseover="expand($index)" ng-mouseleave="unexpand($index)" ng-click="showMap($index)" class="view-map-btn">
-                                <img class="arrow" src="/images/arrow.svg" alt=""/><h3 class="view-map">View Map</h3>
+                                <img class="arrow" src="./images/arrow.svg" alt=""/><h3 class="view-map">View Map</h3>
                             </div>
                         <div id="hide{{$index}}" class="hide" ng-click="hideMap($index)" class="view-map-btn2">
-                            <h3 class="view-map2">Hide Map</h3><img class="arrow2" src="/images/arrow2.svg" alt=""/>
+                            <h3 class="view-map2">Hide Map</h3><img class="arrow2" src="./images/arrow2.svg" alt=""/>
                         </div>
                 </div>
             <div id="map-{{$index}}" class='expanding fade'>
