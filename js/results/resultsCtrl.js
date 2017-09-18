@@ -2,7 +2,7 @@ angular.module('eatsApp').controller('resultsCtrl', function($scope, mainService
 
     $scope.num = Math.floor(Math.random() * ((8)+1) + 1);
 
-    document.getElementById('header').style.backgroundImage = "url('/images/bg" + $scope.num + ".jpg')";
+    document.getElementById('header').style.backgroundImage = "url('./images/bg" + $scope.num + ".jpg')";
 
     $scope.searchResults = mainService.searchResults;
     $scope.searchTerm = mainService.searchTerm;
