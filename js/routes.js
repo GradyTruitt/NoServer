@@ -4,7 +4,7 @@ angular.module('eatsApp').config(function($stateProvider, $urlRouterProvider) {
     
         $stateProvider
             .state('home', {
-                templateUrl: '/views/home.html',
+                templateUrl: './views/home.html',
                 url: '/',
                 controller: 'homeCtrl'
             })
@@ -16,7 +16,7 @@ angular.module('eatsApp').config(function($stateProvider, $urlRouterProvider) {
             })
 
             .state('map', {
-                templateUrl: '/views/map.html',
+                templateUrl: './views/map.html',
                 url: '/map',
                 controller: 'mapCtrl'
             })
