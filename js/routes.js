@@ -10,7 +10,7 @@ angular.module('eatsApp').config(function($stateProvider, $urlRouterProvider) {
             })
 
             .state('results', {
-                templateUrl: '.views/results.html',
+                templateUrl: './views/results.html',
                 url: '/results',
                 controller: 'resultsCtrl'
             })
