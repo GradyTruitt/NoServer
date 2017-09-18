@@ -52,7 +52,7 @@ angular.module('eatsApp').controller('resultsCtrl', function($scope, mainService
         }));
 
         map.on('load', function() {
-            map.loadImage('http://www.bentonvillemerchants.net/wp-content/uploads/2017/09/locationicon-1.png', function(error, image) {
+            map.loadImage('https://cdn.shopify.com/s/files/1/1324/8085/files/locationicon_large.png?v=1505713501', function(error, image) {
                 if (error) throw error;
                 map.addImage('cat', image);
                 map.addLayer({
